@@ -1,0 +1,105 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void funnyNumber(unsigned n){   // n will be passed by auto tester
+    // --- Example output: 
+    
+    //     Output1: 
+    
+    //     When n = 46712, your program should print the following exactly 
+    //     Total even digits = 3
+    //     Total odd digits = 2
+    //     The number is a MANGO number.    
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    
+    //     Output2:
+    //     When n = 0, your program should print the following exactly 
+    //     Total even digits = 1
+    //     Total odd digits = 0
+    //     The number is a MANGO number.
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    
+    //     Output3:
+    //     When n = 1, your program should print the following exactly 
+    //     Total even digits = 0
+    //     Total odd digits = 1
+    //     The number is a ORANGE number.    
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    
+    //     Output4:
+    //     When n = 334, your program should print the following exactly 
+    //     Total even digits = 1
+    //     Total odd digits = 2
+    //     The number is a ORANGE number.    
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    
+    //     Output5:
+    //     When n = 3348, your program should print the following exactly 
+    //     Total even digits = 2
+    //     Total odd digits = 2
+    //         cout << "Total even digits is" << <<endl;
+    
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    
+    //     Output6:
+    //     When n = 600, your program should print the following exactly 
+    //     Total even digits = 3
+    //     Total odd digits = 0
+    //     The number is a MANGO number.    
+    // (a new line must be appended at the end of each line your program prints)
+    // *** NOTICE the full stop at the end of the last line and after that there should be a new line.
+    // --- PLEASSE DO NOT CHANGE ABOVE THIS LINE ---
+    // Write your code after this line.
+    int Nofdigits;
+    int remainder;
+    int decade; 
+    int odd = 0;
+    int even = 0;
+    int i;
+    
+    if (n==0){
+        Nofdigits = 1;
+    }else{
+    Nofdigits = floor(log10(n))+1;
+    }
+    
+    for (i=1; i<=Nofdigits; i++){
+    decade = n%2;
+    
+    if (decade!=0){
+        odd = odd+1;
+        n = (n/10);
+        
+    }else{
+        even = even+1;
+        n = (n/10);
+    }
+    
+    }
+     cout << "Total even digits = " << even << endl;
+    cout << "Total odd digits = " << odd << endl;
+    if (odd > even) {
+    cout << "The number is a ORANGE number."<< endl;
+    }else if (even > odd) {
+        cout << "The number is a MANGO number."<< endl;
+    }else{
+        cout << "The number is a GUAVA number."<< endl;
+        
+        
+        
+    
+    }
+        
+    
+    
+    
+
+    
+}
